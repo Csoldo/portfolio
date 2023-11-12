@@ -18,7 +18,7 @@ api_ping:
     methods: GET
 api_get_texts:
     path: /api/public/texts
-    controller: App\Controller\TextController::getTexts
+    controller: App\Controller\TextController::getAllTexts
     methods: GET
 api_create_text:
     path: /api/texts
