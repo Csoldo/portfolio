@@ -49,7 +49,7 @@ class UserController extends AbstractController
         }
 
         $em = $this->managerRegistry->getManager();
-        
+
         $user = new User();
         $hashedPassword = $this->passwordHasher->hashPassword($user, $password);
         $user->setPassword($hashedPassword);
@@ -60,10 +60,22 @@ class UserController extends AbstractController
         return new JsonResponse($user->getEmail(), Response::HTTP_CREATED);
     }
 
+    public function createUser(string $email, string $password): void
+    {
+        $em = $this->managerRegistry->getManager();
+
+        $user = new User();
+        $hashedPassword = $this->passwordHasher->hashPassword($user, $password);
+        $user->setPassword($hashedPassword);
+        $user->setEmail($email);
+        $em->persist($user);
+        $em->flush();
+    }
+
     public function changePassword(Request $request): JsonResponse
     {
         $data = json_decode($request->getContent(), true);
-        
+
         if (!isset($data['password']) || !isset($data['confirmPassword'])) {
             return new JsonResponse(null, Response::HTTP_UNPROCESSABLE_ENTITY);
         }
@@ -78,7 +90,7 @@ class UserController extends AbstractController
         $user = $this->security->getUser();
 
         $user->setPassword($this->passwordHasher->hashPassword($user, $password));
-        
+
         $em = $this->managerRegistry->getManager();
         $em->flush();
 

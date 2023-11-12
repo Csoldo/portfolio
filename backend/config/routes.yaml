@@ -1,9 +1,5 @@
 api_login_check:
     path: /api/login_check
-api_register:
-    path: /api/public/register
-    controller: App\Controller\UserController::register
-    methods: POST
 api_change_password:
     path: /api/change_password
     controller: App\Controller\UserController:changePassword
@@ -20,3 +16,11 @@ api_ping:
     path: /api/public/ping
     controller: App\Controller\UserController::ping
     methods: GET
+api_get_texts:
+    path: /api/public/texts
+    controller: App\Controller\TextController::getTexts
+    methods: GET
+api_create_text:
+    path: /api/texts
+    controller: App\Controller\TextController::createText
+    methods: POST
