@@ -1,6 +1,7 @@
 import { HStack } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import ColorModeSwitch from "./ColorModeSwitch";
+import LanguageSelector from "./LanguageSelector";
 
 const NavBar = () => {
   return (
@@ -9,6 +10,7 @@ const NavBar = () => {
       <Link to="/portfolio">Portfolio</Link>
       <Link to="/about">About</Link>
       <ColorModeSwitch />
+      <LanguageSelector />
     </HStack>
   );
 };
