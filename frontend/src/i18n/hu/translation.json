@@ -1,4 +1,8 @@
 {
     "greeting": "Sziasztok",
-    "homeText": "Harmadeves hallgato vagyok a groningeni egyetemen"
+    "homeText": "Harmadeves hallgato vagyok a groningeni egyetemen",
+
+    "home": "Otthon",
+    "portfolio": "Portfólió",
+    "about": "Rólam"
 }

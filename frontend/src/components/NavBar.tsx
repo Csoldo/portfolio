@@ -15,20 +15,22 @@ import {
   IconButton,
 } from "@chakra-ui/react";
 import { CloseIcon, HamburgerIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
+import LanguageSelector from "./LanguageSelector";
+import { useTranslation } from "react-i18next";
 
 interface Props {
   children: React.ReactNode;
 }
 
-const Links = ["Home", "Portfolio", "About"];
+const Links = ["home", "portfolio", "about"];
 
 const mapLinkToPath = (link: string) => {
   switch (link) {
-    case "Home":
+    case "home":
       return "/";
-    case "Portfolio":
+    case "portfolio":
       return "/portfolio";
-    case "About":
+    case "about":
       return "/about";
     default:
       return "/";
@@ -37,7 +39,7 @@ const mapLinkToPath = (link: string) => {
 
 const NavLink = (props: Props) => {
   const { children } = props;
-
+  const { t } = useTranslation();
   return (
     <Box
       as="a"
@@ -50,7 +52,7 @@ const NavLink = (props: Props) => {
       }}
       href={mapLinkToPath(children as string) || "#"}
     >
-      {children}
+      {t(children as string)}
     </Box>
   );
 };
@@ -83,6 +85,7 @@ export default function Nav() {
 
           <Flex alignItems={"center"}>
             <Stack direction={"row"} spacing={7}>
+              <LanguageSelector />
               <Button onClick={toggleColorMode}>
                 {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
               </Button>
@@ -95,7 +98,7 @@ export default function Nav() {
                   cursor={"pointer"}
                   minW={0}
                 >
-                  <Avatar size={"sm"} src={"../assets/boldizsar-nagy.jpg"} />
+                  <Avatar size={"sm"} src={"src/assets/boldizsar-nagy.jpg"} />
                 </MenuButton>
                 {/* <MenuList alignItems={"center"}>
                   <br />
