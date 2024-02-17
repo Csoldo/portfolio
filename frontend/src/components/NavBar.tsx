@@ -1,5 +1,3 @@
-"use client";
-
 import {
   Box,
   Flex,
@@ -98,7 +96,7 @@ export default function Nav() {
                   cursor={"pointer"}
                   minW={0}
                 >
-                  <Avatar size={"sm"} src={"src/assets/boldizsar-nagy.jpg"} />
+                  <Avatar size={"sm"} />
                 </MenuButton>
                 {/* <MenuList alignItems={"center"}>
                   <br />
