@@ -23,7 +23,7 @@ const Footer = () => {
         <HStack>
           <IconButton
             as={Link}
-            href="https://github.com/Csoldo"
+            href="https://gitlab.com/Csoldo"
             target="_blank"
             aria-label="GitLab"
             icon={<FaGitlab />}
