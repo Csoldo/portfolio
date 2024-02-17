@@ -13,15 +13,6 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 const Portfolio: React.FC = () => {
   return (
     <Box p={4}>
-      <VStack align="center" spacing={4}>
-        <Heading as="h1" size="xl">
-          My Portfolio
-        </Heading>
-        <Text fontSize="lg">
-          Computer Science 3rd Year Student | Software Developer
-        </Text>
-      </VStack>
-
       <Box mt={8}>
         <Text fontSize="xl">Projects</Text>
         <VStack align="start" spacing={4}>
