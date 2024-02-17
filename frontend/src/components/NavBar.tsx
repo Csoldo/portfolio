@@ -15,6 +15,7 @@ import {
 import { CloseIcon, HamburgerIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import LanguageSelector from "./LanguageSelector";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 interface Props {
   children: React.ReactNode;
@@ -39,19 +40,7 @@ const NavLink = (props: Props) => {
   const { children } = props;
   const { t } = useTranslation();
   return (
-    <Box
-      as="a"
-      px={2}
-      py={1}
-      rounded={"md"}
-      _hover={{
-        textDecoration: "none",
-        bg: useColorModeValue("gray.200", "gray.700"),
-      }}
-      href={mapLinkToPath(children as string) || "#"}
-    >
-      {t(children as string)}
-    </Box>
+    <Link to={mapLinkToPath(children as string)}>{t(children as string)}</Link>
   );
 };
 export default function Nav() {
