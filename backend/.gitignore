@@ -15,4 +15,4 @@
 ###< lexik/jwt-authentication-bundle ###
 
 /.env
-/.editorconfig
+.editorconfig
