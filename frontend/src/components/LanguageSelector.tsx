@@ -34,7 +34,6 @@ const LanguageSelector = () => {
             <span>{lang.label}</span>
             <Image
               boxSize="2rem"
-              borderRadius="2px"
               src={lang.flag}
               alt={lang.label}
               ml="16px"
