@@ -10,28 +10,28 @@ import {
   useColorMode,
   HStack,
   IconButton,
-} from "@chakra-ui/react";
-import { CloseIcon, HamburgerIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
-import LanguageSelector from "./LanguageSelector";
-import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+} from '@chakra-ui/react';
+import { CloseIcon, HamburgerIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
+import LanguageSelector from './LanguageSelector';
+import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 interface Props {
   children: React.ReactNode;
 }
 
-const Links = ["home", "portfolio", "about"];
+const Links = ['home', 'portfolio', 'about'];
 
 const mapLinkToPath = (link: string) => {
   switch (link) {
-    case "home":
-      return "/";
-    case "portfolio":
-      return "/portfolio";
-    case "about":
-      return "/about";
+    case 'home':
+      return '/';
+    case 'portfolio':
+      return '/portfolio';
+    case 'about':
+      return '/about';
     default:
-      return "/";
+      return '/';
   }
 };
 
@@ -47,20 +47,20 @@ export default function Nav() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Box bg={useColorModeValue("gray.100", "gray.900")} px={4}>
-        <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
+      <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
+        <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
-            size={"md"}
+            size={'md'}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-            aria-label={"Open Menu"}
-            display={{ md: "none" }}
+            aria-label={'Open Menu'}
+            display={{ md: 'none' }}
             onClick={isOpen ? onClose : onOpen}
           />
-          <HStack spacing={8} alignItems={"center"}>
+          <HStack spacing={8} alignItems={'center'}>
             <HStack
-              as={"nav"}
+              as={'nav'}
               spacing={4}
-              display={{ base: "none", md: "flex" }}
+              display={{ base: 'none', md: 'flex' }}
             >
               {Links.map((link) => (
                 <NavLink key={link}>{link}</NavLink>
@@ -68,22 +68,21 @@ export default function Nav() {
             </HStack>
           </HStack>
 
-          <Flex alignItems={"center"}>
-            <Stack direction={"row"} spacing={7}>
+          <Flex alignItems={'center'}>
+            <Stack direction={'row'} spacing={7}>
               <LanguageSelector />
               <Button onClick={toggleColorMode}>
-                {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+                {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
               </Button>
 
               <Menu>
                 <MenuButton
                   as={Button}
-                  rounded={"full"}
-                  variant={"link"}
-                  cursor={"pointer"}
+                  rounded={'full'}
+                  variant={'link'}
+                  cursor={'pointer'}
                   minW={0}
-                >
-                </MenuButton>
+                ></MenuButton>
               </Menu>
             </Stack>
           </Flex>

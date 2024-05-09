@@ -1,4 +1,4 @@
-import { VStack, Heading, Text } from "@chakra-ui/react";
+import { VStack, Heading, Text } from '@chakra-ui/react';
 
 const Header = () => {
   return (

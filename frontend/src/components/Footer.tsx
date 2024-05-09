@@ -1,5 +1,11 @@
-import { Box, Text, HStack, IconButton, Link } from "@chakra-ui/react";
-import { FaGithub, FaLinkedin, FaEnvelope, FaGitlab } from "react-icons/fa";
+import { Box, Text, HStack, IconButton, Link } from '@chakra-ui/react';
+import {
+  FaGithub,
+  FaLinkedin,
+  FaEnvelope,
+  FaGitlab,
+  FaArrowAltCircleDown,
+} from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -51,6 +57,18 @@ const Footer = () => {
             isRound
           />
           <Text as="b">nagyboldi2000@gmail.com</Text>
+        </HStack>
+        <HStack>
+          <IconButton
+            as={Link}
+            href="frontend/src/assets/Boldizsar_Nagy_CV_2023.pdf"
+            aria-label="Download CV"
+            icon={<FaArrowAltCircleDown />}
+            isRound
+            target="_blank" // Opens in a new tab
+            rel="noopener noreferrer" // Security reasons
+          />
+          <Text as="b">CV</Text>
         </HStack>
       </HStack>
     </Box>

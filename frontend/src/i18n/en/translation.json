@@ -7,9 +7,8 @@
     "past": "Past",
     "present": "Present",
     "future": "Future",
-    "pastText": "I have education in the field of computing science and have worked in the field of IT. I have also been involved in various projects and have gained experience in the field of computing science.",
-    "presentText": "I am currently studying Computing Science at the University of Groningen and am working on various projects. I am also looking for internships and job opportunities in the field of computing science.",
-    "futureText": "I am looking for internships and job opportunities in the field of computing science. I am also looking for opportunities to work on various projects and to gain experience in the field of computing science.",
-
+    "pastText": "I have education in the field of computing science and have worked in various projects during my professional working experience. I have also been involved in various projects and have gained experience in the field of computing science.",
+    "presentText": "I am currently studying Computing Science at the University of Groningen and am working on my thesis in the field of game theory coupled with artificial intelligence techniques such as reinforcement learning. I am also working on various projects in the field of computing science.",
+    "futureText": "I hope to broaden my knowledge in the field of computing science and to work on interesting projects in the future. I am also interested in the field of artificial intelligence and machine learning.",
     "aboutMe": "About me"
 }
