@@ -9,7 +9,7 @@ const Header = () => {
       <Heading as="h1" size="xl" padding={4}>
         Boldizsár Nagy
       </Heading>
-      <Text fontSize="lg">
+      <Text fontSize="lg" padding={4} align={'center'}>
         {t('headerText')}
       </Text>
     </VStack>

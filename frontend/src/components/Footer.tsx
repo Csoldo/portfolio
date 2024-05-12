@@ -15,7 +15,7 @@ const Footer = () => {
       <Text fontSize="xl" paddingY={6}>
         {t("contactInfo")}
       </Text>
-      <HStack align="center" spacing={6}>
+      <HStack align="center" spacing={6} sx={{flexWrap: 'wrap'}}>
         <HStack>
           <IconButton
             as={Link}
@@ -53,17 +53,17 @@ const Footer = () => {
         <HStack>
           <IconButton
             as={Link}
-            href="mailto:nagyboldi2000@gmail.com"
+            href="mailto:boldi.nagy2000@gmail.com"
             aria-label="Email"
             icon={<FaEnvelope />}
             isRound
           />
-          <Text as="b">nagyboldi2000@gmail.com</Text>
+          <Text as="b">boldi.nagy2000@gmail.com</Text>
         </HStack>
         <HStack>
           <IconButton
             as={Link}
-            href="frontend/src/assets/Boldizsar_Nagy_CV_2023.pdf"
+            href="Boldizsar_Nagy_CV_2023.pdf"
             aria-label="Download CV"
             icon={<FaArrowAltCircleDown />}
             isRound
