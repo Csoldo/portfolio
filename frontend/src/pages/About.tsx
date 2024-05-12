@@ -1,17 +1,14 @@
-import React from 'react';
-import { Box, Text } from '@chakra-ui/react';
+import React from "react";
+import { Box, Text } from "@chakra-ui/react";
+import { useTranslation } from "react-i18next";
 
 const AboutMe: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <Box p={4}>
       <Box mt={8}>
         <Text fontSize="xl">About Me</Text>
-        <Text>
-          I am a passionate software developer currently pursuing a degree in
-          Computer Science. My interest lies in both frontend and backend
-          development, with a focus on creating efficient and scalable
-          solutions.
-        </Text>
+        <Text>{t('aboutMeText')}</Text>
       </Box>
 
       <Box mt={8}>

@@ -1,17 +1,19 @@
-import { Box, Text, HStack, IconButton, Link } from '@chakra-ui/react';
+import { Box, Text, HStack, IconButton, Link } from "@chakra-ui/react";
 import {
   FaGithub,
   FaLinkedin,
   FaEnvelope,
   FaGitlab,
   FaArrowAltCircleDown,
-} from 'react-icons/fa';
+} from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <Box mt={8} padding={8}>
       <Text fontSize="xl" paddingY={6}>
-        Contact Information
+        {t("contactInfo")}
       </Text>
       <HStack align="center" spacing={6}>
         <HStack>
