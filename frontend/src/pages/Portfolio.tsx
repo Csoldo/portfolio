@@ -85,13 +85,6 @@ const Portfolio: React.FC = () => {
   const { t } = useTranslation();
   const experiences: Experience[] = [
     {
-      period: t("period2021to2022"),
-      company: "Smeedijzer internet",
-      role: t("frontendDeveloper"),
-      description: t("description1"),
-      skills: ["HTML", "CSS", "PHP", "WordPress", "Website deployment"],
-    },
-    {
       period: t("period2023toPresent"),
       company: "Syntho",
       role: t("softwareDeveloper"),
@@ -111,6 +104,13 @@ const Portfolio: React.FC = () => {
         "Hive",
         "Sybase",
       ],
+    },
+    {
+      period: t("period2021to2022"),
+      company: "Smeedijzer internet",
+      role: t("frontendDeveloper"),
+      description: t("description1"),
+      skills: ["HTML", "CSS", "PHP", "WordPress", "Website deployment"],
     },
   ];
 

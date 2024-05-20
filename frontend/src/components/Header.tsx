@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <VStack align="center" spacing={4}>
       <Heading as="h1" size="xl" padding={4}>
-        Boldizsár Nagy
+        {t('boldizsarnagy')}
       </Heading>
       <Text fontSize="lg" padding={4} align={'center'}>
         {t('headerText')}
