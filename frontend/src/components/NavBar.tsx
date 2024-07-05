@@ -10,6 +10,7 @@ import {
   useColorMode,
   HStack,
   IconButton,
+  VStack,
 } from '@chakra-ui/react';
 import { CloseIcon, HamburgerIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
 import LanguageSelector from './LanguageSelector';
@@ -42,12 +43,18 @@ const NavLink = (props: Props) => {
     <Link to={mapLinkToPath(children as string)}>{t(children as string)}</Link>
   );
 };
+
 export default function Nav() {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
+      <Box
+        mt={8}
+        width={'100%'}
+        bg={useColorModeValue('gray.100', 'gray.900')}
+        px={4}
+      >
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
             size={'md'}
@@ -87,6 +94,16 @@ export default function Nav() {
             </Stack>
           </Flex>
         </Flex>
+
+        {isOpen ? (
+          <Box pb={4} display={{ md: 'none' }}>
+            <VStack as={'nav'} spacing={4}>
+              {Links.map((link) => (
+                <NavLink key={link}>{link}</NavLink>
+              ))}
+            </VStack>
+          </Box>
+        ) : null}
       </Box>
     </>
   );

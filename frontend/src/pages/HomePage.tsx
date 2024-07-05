@@ -1,13 +1,15 @@
-import { Box, Container, HStack, Heading, Image, Text } from '@chakra-ui/react';
+import { Box, Container, HStack, VStack, Heading, Image, Text, useBreakpointValue } from '@chakra-ui/react';
 import { useTranslation } from 'react-i18next';
 import { profilePic } from '../assets';
 
 const HomePage = () => {
   const { t } = useTranslation();
+  const stackDirection = useBreakpointValue({ base: 'column', md: 'row' });
+  const alignItems = useBreakpointValue({ base: 'flex-start', md: 'center' });
 
   return (
     <>
-      <HStack>
+      <HStack as={stackDirection} align={alignItems} wrap={'wrap'}>
         <Container>
           <Box p={4}>
             <Box mt={8}>

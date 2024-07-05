@@ -10,10 +10,6 @@
     "future": "Future",
     "headerText": "Computer Science 3rd Year Student | Software Developer",
     "contactInfo": "Contact Information",
-    "pastText": "I have education in the field of computing science and have worked in various projects during my professional working experience. I have also been involved in various projects and have gained experience in the field of computing science.",
-    "presentText": "I am currently studying Computing Science at the University of Groningen and am working on my thesis in the field of game theory coupled with artificial intelligence techniques such as reinforcement learning. I am also working on various projects in the field of computing science.",
-    "futureText": "I hope to broaden my knowledge in the field of computing science and to work on interesting projects in the future. I am also interested in the field of artificial intelligence and machine learning.",
-    "aboutMe": "About me",
     "professionalWorkingExperience": "Professional Working Experience",
     "hobbyProjects": "Hobby Projects",
     "sourceCode": "Source code",
@@ -27,5 +23,12 @@
     "descriptionGeneticAlgorithm": "A program that guesses an input string using genetic algorithm, mutations and breeding.",
     "period2021to2022": "2021 Dec - 2022 Dec",
     "period2023toPresent": "2023 Feb - Present",
-    "aboutMeText": "I am a passionate software developer currently pursuing a degree in Computer Science. My interest lies in both frontend and backend development, with a focus on creating efficient and scalable solutions."
+    "pastText": "I studied Computing Science at the University of Groningen and worked on my thesis in the field of game theory coupled with artificial intelligence. The goal of my project was to develop a Deep Reinforcement Learning algorithm to solve zero-sum Stochastic Games. During my education, I participated in various projects and gained substantial experience in computing science.",
+    "presentText": "I recently finished my Bachelor's degree in Computing Science in the Netherlands. After completing my studies, I moved back to Hungary, leaving my job in Amsterdam where I worked for 1.5 years as a software developer. I now look forward to applying my knowledge and experience in the Hungarian environment and continue to engage in various projects that enhance my expertise.",
+    "futureText": "I aim to broaden my knowledge in computing science further and work on intriguing projects. I am particularly interested in the fields of web development, artificial intelligence and machine learning, data science and much more. I look forward to contributing to advancements in these interesting areas.",
+    "aboutMe": "About me",
+    "aboutMeTextFirst": "Hello! I'm a dynamic and multilingual computer science graduate with a broad range of experience in both physical and office environments. I pride myself on being an excellent team player, capable of easily establishing strong relationships with colleagues and fellow students.",
+    "aboutMeTextSecond": "My international academic and professional experiences have provided me with a unique perspective and adaptability. I am passionate about leveraging these experiences to deepen my expertise in computer science and contribute meaningfully to the field.",
+    "aboutMeTextThird": "In addition to my professional work, I've also engaged in various personal projects driven by my interests. These projects have allowed me to explore new technologies, sharpen my problem-solving skills, and bring innovative ideas to life. Whether it's developing a new app, experimenting with machine learning algorithms, or building a cool gadget, I love diving into projects that challenge and excite me.",
+    "aboutMeTextFourth": "Outside of my professional pursuits, I enjoy exploring new places and staying updated with the latest advancements in technology. I am always open to new opportunities and collaborations that challenge me and help me grow further in my career."
 }

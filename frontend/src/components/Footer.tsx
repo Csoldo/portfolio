@@ -1,4 +1,11 @@
-import { Box, Text, HStack, IconButton, Link } from "@chakra-ui/react";
+import {
+  Box,
+  Text,
+  HStack,
+  IconButton,
+  Link,
+  useBreakpointValue,
+} from '@chakra-ui/react';
 import {
   FaGithub,
   FaLinkedin,
@@ -10,12 +17,15 @@ import { useTranslation } from "react-i18next";
 
 const Footer = () => {
   const { t } = useTranslation();
+  const stackDirection = useBreakpointValue({ base: 'column', md: 'row' });
+  const alignItems = useBreakpointValue({ base: 'flex-start', md: 'center' });
+
   return (
-    <Box mt={8} padding={8}>
+    <Box mt={8} padding={8} w="100%">
       <Text fontSize="xl" paddingY={6}>
         {t("contactInfo")}
       </Text>
-      <HStack align="center" spacing={6} sx={{flexWrap: 'wrap'}}>
+      <HStack as={stackDirection} align={alignItems} spacing={6} wrap="wrap">
         <HStack>
           <IconButton
             as={Link}
@@ -63,7 +73,7 @@ const Footer = () => {
         <HStack>
           <IconButton
             as={Link}
-            href="Boldizsar_Nagy_CV_2023.pdf"
+            href="boldizsar_cv.pdf"
             aria-label="Download CV"
             icon={<FaArrowAltCircleDown />}
             isRound
