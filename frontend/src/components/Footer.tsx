@@ -12,20 +12,31 @@ import {
   FaEnvelope,
   FaGitlab,
   FaArrowAltCircleDown,
-} from "react-icons/fa";
-import { useTranslation } from "react-i18next";
+} from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
   const { t } = useTranslation();
-  const stackDirection = useBreakpointValue({ base: 'column', md: 'row' });
-  const alignItems = useBreakpointValue({ base: 'flex-start', md: 'center' });
+  const stackDirection = useBreakpointValue<'column' | 'row'>({
+    base: 'column',
+    md: 'row',
+  });
+  const alignItems = useBreakpointValue<'flex-start' | 'center'>({
+    base: 'flex-start',
+    md: 'center',
+  });
 
   return (
     <Box mt={8} padding={8} w="100%">
       <Text fontSize="xl" paddingY={6}>
-        {t("contactInfo")}
+        {t('contactInfo')}
       </Text>
-      <HStack as={stackDirection} align={alignItems} spacing={6} wrap="wrap">
+      <HStack
+        direction={stackDirection}
+        align={alignItems}
+        spacing={6}
+        wrap="wrap"
+      >
         <HStack>
           <IconButton
             as={Link}
