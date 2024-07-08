@@ -74,12 +74,12 @@ const Footer = () => {
         <HStack>
           <IconButton
             as={Link}
-            href="mailto:boldi.nagy2000@gmail.com"
+            href="mailto:nagyboldi2000@gmail.com"
             aria-label="Email"
             icon={<FaEnvelope />}
             isRound
           />
-          <Text as="b">boldi.nagy2000@gmail.com</Text>
+          <Text as="b">nagyboldi2000@gmail.com</Text>
         </HStack>
         <HStack>
           <IconButton
