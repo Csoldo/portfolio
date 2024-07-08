@@ -50,7 +50,6 @@ export default function Nav() {
   return (
     <>
       <Box
-        mt={8}
         width={'100%'}
         bg={useColorModeValue('gray.100', 'gray.900')}
         px={4}
